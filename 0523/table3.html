@@ -5,11 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
             body{
                 background: aliceblue;
             }
             table{
                 border-collapse: collapse; /* 셀 간의 간격 제거 */
+                width:391px;
             }
             tr{
                 height: 40px;
@@ -30,7 +32,14 @@
             .bg_green{
                 background: palegreen;
             }
-        
+            tr:hover{
+                background: #ccc;
+                font-size: 20px;
+                font-family: "Nanum Gothic", sans-serif; /* 글꼴 */
+                font-weight: 400; /* 굵기 */
+                font-style: normal;
+                color: white;
+            }
         </style>
         <!-- style은 CSS 사용가능 태그 {}안에 작성  #id(유일, 중복 불가) .class(그룹, 중복 가능)
             /* css 주석 */ -->
