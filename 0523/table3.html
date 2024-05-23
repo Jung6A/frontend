@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+            body{
+                background: aliceblue;
+            }
+            table{
+                border-collapse: collapse; /* 셀 간의 간격 제거 */
+            }
+            tr{
+                height: 40px;
+            }
+            th, td{/* ,로 구분 */
+                border: 1px solid black;
+                text-align: center;
+            }
+            .w100{
+                width: 100px;
+            }
+            .w80{
+                width: 80px;
+            }
+            .bg_yellow{
+                background: palegoldenrod;
+            }
+            .bg_green{
+                background: palegreen;
+            }
+        
+        </style>
+        <!-- style은 CSS 사용가능 태그 {}안에 작성  #id(유일, 중복 불가) .class(그룹, 중복 가능)
+            /* css 주석 */ -->
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th class="w100 bg_yellow">학교명</th>
+                    <th class="w100 bg_yellow">학과명</th>
+                    <th class="w100 bg_green">이름</th>
+                    <th class="w80 bg_green">성적</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A대학교</td>
+                    <td>컴공과</td>
+                    <td>이순신</td>
+                    <td>4.3</td>
+                </tr>
+                <tr>
+                    <td>B대학교</td>
+                    <td>국문과</td>
+                    <td>한석봉</td>
+                    <td>3.9</td>
+                </tr>
+                <tr>
+                    <td>C대학교</td>
+                    <td>기계과</td>
+                    <td>장영실</td>
+                    <td>2.5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th class="bg_yellow">학교명</th>
+                    <th class="bg_yellow">학과명</th>
+                    <th class="bg_green">이름</th>
+                    <th class="bg_green">성적</th>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
