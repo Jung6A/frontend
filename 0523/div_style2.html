@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>div 스타일2</title>
+        <style type="text/css">
+            body{
+                background: aliceblue;
+            }
+            #big1{
+                margin: 0 auto;
+                background: cornflowerblue;
+                width: 750px;
+                box-sizing: border-box;
+                padding: 25px 55px 25px 25px;
+                margin-bottom: 15px;
+            }
+            #big2{
+                margin: 0 auto;
+                background: burlywood;
+                width: 750px;
+                height: 120px;
+            }
+            #middle1{
+                height: 150px;
+                background: indianred;
+                margin-bottom: 30px;
+            }
+            #middle2{
+                height: 150px;
+                background: darkseagreen;
+                margin-bottom: 30px;
+            }
+            #middle3{
+                height: 150px;
+            }
+            #small1, #small2{
+                display: inline-block; /* span에 값을 주기 위한 엘리먼트 */
+            }
+            #small1{
+                height: 150px;
+                width: 270px;
+                background: khaki;
+                margin-right: 20px;
+            }
+            #small2{
+                height: 150px;
+                /* width: 380px; */
+                width:calc( 750px - 270px - 55px - 25px - 20px );
+                background: lightslategray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="big1">
+            <div id="middle1"></div>
+            <div id="middle2"></div>
+            <div id="middle3">
+                <span id="small1"></span><span id="small2"></span>
+            </div>
+        </div>
+        <div id="big2"></div>
+    </body>
+</html>
