@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+            .sp{
+                display: inline-block;
+            }
+            #whole{
+                width: 1200px;
+                height: 800px;
+                box-sizing: border-box;
+                background: dodgerblue;
+                padding: 50px;
+            }
+            #middle{
+                height: 600px;
+                margin-bottom: 30px;
+            }
+            #bottom{
+                height: calc(800px - 100px - 600px - 30px);
+                background: coral;
+                padding: 20px;
+            }
+            #md1{
+                height: 600px;
+                width: calc(1000px / 3);
+                background: goldenrod;
+                margin-right: 50px;
+            }
+            #md2{
+                height: 600px;
+                width: calc(1000px / 3);
+                background: forestgreen;
+                margin-right: 50px;
+            }
+            #md3{
+                height: 600px;
+                width: calc(1000px /3);
+                background: lightgray;
+            }
+            #sm1{
+                height: calc(800px - 100px - 600px - 30px);
+                width: 250px;
+                background: indianred;
+                margin-right: 20px;
+            }
+            #sm2{
+                height: calc(800px - 100px - 600px - 30px);
+                width: 250px;
+                background: cadetblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="whole">
+            <div id="middle">
+                <span id="md1" class="sp"></span><span id="md2" class="sp"></span><span id="md3" class="sp"></span>
+            </div>
+            <div id="bottom">
+                <span id="sm1" class="sp"></span><span id="sm2" class="sp"></span>
+            </div>
+        </div>
+    </body>
+</html>
