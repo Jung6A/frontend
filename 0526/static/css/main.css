@@ -33,6 +33,10 @@ ul{
     border-left: 1px solid snow;
     border-right: 1px solid snow;
 }
+#top .top_text:hover{
+    cursor: pointer;
+    font-style: italic;
+}
 #nav{
     width: 100%;
     height: 106px;
@@ -60,11 +64,106 @@ ul{
     position: relative;
     top: 30px;
     font-size: 25px;
+    color: darkseagreen;
+    font-weight: 550;
     padding: 0 15px;
 }
 #menu_list .menu:hover{
     cursor: pointer;
-    color: darkseagreen;
+    color: sandybrown;
     font-weight: 800;
     text-shadow: 3px 3px 2px lightgray;
+}
+#main{
+    width: 100%;
+}
+#slide{
+    width: 100%;
+    position: relative;
+}
+#slide .slide_image{
+    height: 350px;
+    background: url(../image/slide.jpeg) no-repeat center;
+    background-size: cover;
+    border-radius: 5px;
+}
+.move_bt{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: azure;
+    padding: 1px 5px 5px 5px;
+    font-size: 25px;
+    opacity: 0.65;
+    cursor: pointer;
+}
+.left{
+    left: 10px;
+}
+.right{
+    right: 10px;
+}
+#content{
+    width: 100%;
+    height: 280px;
+    padding: 20px;
+}
+.left_content{
+    float: left;
+    width: 50%;
+}
+.left_content .notice .title{
+    line-height: 40px;
+}
+.right_content{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.event_top{
+    height: 105px;
+    background: url(../image/event1.jpeg) no-repeat center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightslategray;
+}
+.event_bottom{
+    height: 105px;
+    background: url(../image/event2.jpeg) no-repeat center;
+    background-size: cover;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightslategray;
+}
+#footer{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    background:forestgreen;
+    color: azure;
+    padding: 10px 20px;
+}
+.foot_menu{
+    height: 30px;
+    font-size: 14px;
+}
+#footer .foot_menu li{
+    float: left;
+    padding: 0 10px;
+    border-right: 1px solid lightgoldenrodyellow;
+}
+#footer .foot_menu li:nth-child(4){
+    border-right: 0px;
+}
+#footer
+.foot_text{
+    width: 100%;
+    font-weight: 800;
+    padding: 10px 10px;
+    position: absolute;
+    top: 30px;
+}
+.foot_text p{
+    line-height: 25px;
 }
