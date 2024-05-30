@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=\, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0; padding: 0;
+            }
+            #header{
+                width: 1000px;
+                margin: 0 auto;
+                padding: 0 20px;
+                display:flex;
+                justify-content: space-between;
+                border-top: 1px solid lightgray;
+                border-bottom: 1px solid lightgray;
+            }
+            #right{
+                display: flex;
+                position: relative;
+            }
+            .item{
+                list-style-type: none;
+                font-weight: 700;
+                padding: 20px;
+                cursor: pointer;
+            }
+            .item:hover{
+                background-color: #00dc64;
+                color: snow;
+            }
+            .item:first-child{
+                background-color: #00dc64;
+                color: snow;
+            }
+            #left{
+                padding: 12px;
+            }
+            #creator_bt{
+                background-color: #00dc64;
+                color: snow;
+                padding: 10px 25px;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 5px;
+                border: 0;
+                cursor: pointer;
+            }
+        </style>
+        <div id="header">
+            <div id="right">
+                    <div class="item">홈</div>
+                    <div class="item">웹툰</div>
+                    <div class="item">베스트도전</div>
+                    <div class="item">도전만화</div>
+                    <div class="item">마이페이지</div>
+            </div>
+            <div id="left">
+                <button id="creator_bt">CREATOR'S</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            #container1{
+                display: flex;
+                gap: 20px;
+            }
+            .item1{
+                padding: 0 10px;
+                cursor: pointer;
+            }
+            #container2{
+                display: flex;
+                width: 500px;
+            }
+            .item2{
+                flex-grow: 1;
+                text-align: center;
+            }
+            #container3{
+                display: flex;
+                width: 800px;
+                padding: 20px 0;
+                border-top: 1px solid lightgray;
+                border-bottom: 1px solid lightgray;
+            }
+            #container3>ul{
+                margin: 0; padding: 0;
+                list-style-type: none;
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .logo>img{
+                width: 50px;
+                display: block;
+            }
+        </style>
+        <h2>메뉴 만들기</h2>
+        <div id="container1">
+            <div class="item1">쇼핑</div>
+            <div class="item1">증권</div>
+            <div class="item1">뉴스</div>
+            <div class="item1">웹툰</div>
+            <div class="item1">스포츠</div>
+        </div>
+        <div id="container2">
+            <span class="item2">쇼핑</span>
+            <span class="item2">증권</span>
+            <span class="item2">뉴스</span>
+            <span class="item2">웹툰</span>
+            <span class="item2">스포츠</span>
+        </div>
+        <div id="container3">
+            <div class="logo">
+                <img src="https://loremflickr.com/200/200">
+            </div>
+            <ul>
+                <li class="item3">쇼핑</li>
+                <li class="item3">증권</li>
+                <li class="item3">뉴스</li>
+                <li class="item3">웹툰</li>
+                <li class="item3">스포츠</li>
+            </ul>
+        </div>
+    </body>
+</html>
