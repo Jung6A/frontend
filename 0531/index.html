@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*변수: 데이터가 저장된, 저장될 수 있는 메모리(ram) 공간
+            변수 이름의 첫 번째는 반드시 문자 (숫자 불가) */
+            //변수를 사용할 경우 쉽게 재사용이 가능
+            num=10;
+            apple="나는 사과";
+            melon=23.45;
+            melon=100;
+            melon="나는 멜론";
+            document.write(num);
+            document.write(num);
+            document.write(num);
+            document.write(num);
+            document.write("나는 자바스크립트입니다.");
+            //덮어쓰기 가능
+            num=100;
+            document.write("<br>");
+            document.write(num*5);
+            //사각형의 너비는 45이고 높이는 15일 경우 높이는 얼마인가?
+            width=45;
+            height=15;
+            document.write("<br>");
+            document.write("사각형의 너비는 ");
+            document.write(width);
+            document.write(" 높이는 " + height);
+            document.write("<br>");
+            document.write("넓이는 "+width*height);
+            //국어: 89, 영어: 94, 수학: 78
+            //총점: 261점
+            kor=89;
+            eng=94;
+            mat=78;
+            document.write("<br><br>");
+            document.write("국어: "+kor+", 영어: "+eng+", 수학: "+mat);
+            document.write("<br>");
+            document.write("총점: "+(kor+eng+mat)+"점");
+            document.write("<hr>")
+            커피주문=3;
+            수박주스주문=4;
+            아메리카노=1500;
+            수박주스=2000;
+            document.write("커피 총 주문 금액: "+(커피주문*아메리카노));
+            document.write("<br>");
+            document.write("수박주스 총 주문 금액: "+(수박주스주문*수박주스));
+            document.write("<br>")
+            document.write("음료 총 주문 금액: "+((커피주문*아메리카노)+(수박주스주문*수박주스)));
+            //변수의 이해
+            redCup=10;
+            blueCup=20;
+            whiteCup=0;
+            whiteCup=redCup;
+            redCup=blueCup;
+            blueCup=whiteCup;
+            document.write("<hr>")
+            document.write(blueCup);
+            document.write("<br>")
+            document.write(redCup);
+            //데이터 입력 방법 1.
+            //prompt를 통해 데이터 입력 가능
+            //prompt로 입력한 데이터는 문자열
+            //숫자로 계산하려면 숫자로 강제 변환 필요
+            //숫자로 변환 가능한 문자열만 가능
+            //parseInt(문자열)→정수로 변환
+            //parsefloat(문자열)→실수로 변환
+            //Number(문자열)→숫자로 변환: 문자열이 ㅔ00
+            kor=prompt("국어 점수");
+            mat=prompt("수학 점수");
+            eng=prompt("영어 점수");
+            total=kor+mat+eng;
+            document.write("<hr>");
+            document.write("국어: "+kor+"수학: "+mat+"영어: "+eng);
+            document.write("<br> 총점: "+total);
+            //실습 3.
+            //이름과 거주 도시명, 생년월일을 입력하여 출력하세요.
+            name=prompt("이름을 입력하세요");
+            city=prompt("거주 도시명을 입력하세요");
+            year=prompt("생년을 입력하세요");
+            month=prompt("생월을 입력하세요");
+            day=prompt("생일을 입력하세요");
+            document.write("<hr>");
+            document.write("이름: "+name);
+            document.write("<br>거주 도시: "+city);
+            document.write("<br>생년월일: "+year+"년 "+month+"월 "+day+"일");
+        </script>
+    </head>
+    <body>
+        <!--
+            카멜 표기법: 첫 단어는 소문자 시작, 두번째 단어부터 첫 글자를 대문자 표기
+             blueCup, myName, iAmSpiderman
+             일반 변수명, 함수명, 메서드명 등
+            스네이크 표기법: 모든 단어를 소문자로 작성하고 단어 사이에 _ 삽입
+             blue_cup, my_name, i_am_spiderman
+             데이터베이스 테이블명, 테이블의 컬럼명
+            파스칼 케이스: 모든 단어를 띄어쓰기 없이 대문자로 시작
+             BlueCup, MyName, IAmSpiderMan
+             클래스명, 인터페이스명
+            케밥 케이스: 모든 단어를 소문자로 작성하고 단어 사이에 - 삽입
+             blue-cup, my-name, i-am-spider-man
+             HTML 태그의 CLASS, ID
+            헝가리안 표기법: 이름에 목적이나 타입을 접두사로 기재
+             blueInt, blue_int, blue-int, BlueInt
+             myNameString, my_name_string
+             변수명
+            상수: 모두 대문자로 작성
+        -->
+    </body>
+</html>
