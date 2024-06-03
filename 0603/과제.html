@@ -10,12 +10,25 @@
         //어떤 사람이 20년 동안 소주를 마셨다.
         //하루에 몇 잔씩 마시는지 입력받기(prompt)
         //이 사람의 수명은 총 몇 분 단축되었는가?
-        //               총 몇 시간 단축되었는가?
-        //               총 며칠 단축되었는가?
+        //                총 몇 시간 단축되었는가?
+        //                총 며칠 단축되었는가?
         //  모든 값은 정수만 출력
+        soju=Number(prompt("하루에 몇 잔의 소주를 마시나?"));
+        sumyeongM=(soju*365*20);
+        sumyeongH=Math.round(sumyeongM/60);
+        sumyeongD=Math.round(sumyeongH/24);
+        document.write("하루에 마시는 소주는 "+soju+"잔<br>");
+        document.write("줄어든 수명은 "+sumyeongM+"분<br>");
+        document.write("시간으로 따지면 "+sumyeongH+"시간<br>");
+        document.write("일자로 따지면 "+sumyeongD+"일");
 
         //과제2.
         //두 개의 주사위를 던져 같은 값이 나온다면 당첨, 아니라면 꽝 출력
+        dice1=Math.floor(Math.random()*6)+1;
+        dice2=Math.floor(Math.random()*6)+1;
+        result=(dice1==dice2)?"당첨":"꽝";
+        document.write(`<br><br>주사위1: ${dice1}, 주사위2: ${dice2}<br>`);
+        document.write(result);
     </script>
 </head>
 <body>
