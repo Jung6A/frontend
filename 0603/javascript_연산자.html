@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        연산자 종류
+        산술 연산자: +, -, *, /, %
+        대입 연산자: = (오른쪽 값을 왼쪽에 저장)
+        증감 연산자: ++, -- (1 증가 혹은 1 감소)
+        비교 연산자: >, < >=, <=, ==, ===, !=
+        논리 연산자: &&(and), ||(or), !(not)
+        조건 연산자(삼항 연산자): (비교식) ? 참:거짓;
+
+        연산자 사용시 주의사항
+        연산자 우선순위를 생각하고 식을 만들어야 한다.
+        */
+       //console.log(출력 내용); 테스트, 개발 과정에서 확인용
+       //산술 연산자 +, -, *, /, %(나머지 값 도출)
+    //    num1=17;
+    //    num2=4;
+    //    console.log(num1+num2);
+    //    console.log(num1-num2);
+    //    console.log(num1*num2);
+    //    console.log(num1/num2);
+    //    console.log(num1%num2);
+    //    //증감 연산자 ++, --
+    //    add1=10;
+    //    add1++;
+    //    console.log(add1);
+    //    down1=10;
+    //    down1--;
+    //    console.log(down1);
+    //    add2=10;
+    //    console.log(add2++);
+    //    console.log(add2);
+    //    add3=10;
+    //    result=add3++;
+    //    console.log(result);
+    //    console.log(add3);
+    //    add4=10;
+    //    console.log(++add4);
+    //    //비교 연산자
+    //    //대소비교연산자 >, <, >=, <=
+    //    //등가비교연산자 ==, ===.!=
+    //    console.log(19>9);
+    //    console.log(10<5);
+    //    num1=15;
+    //    num2=23;
+    //    //바이킹을 타는데 키가 150 이상만 탈 수 있다.
+    //    //20<=?
+    //    console.log(num1>num2);
+    //    console.log(num1>=num2);
+    //    console.log(num1<=num2);
+
+    // //    tall=Number(prompt("신장을 입력하세요."));
+    // //    console.log("true면 탑승 가능, false면 탑승 불가");
+    // //    colsole.log(tall>=150);
+
+    //    //신입개발자의 초봉 평균은 3100이다.
+    //    //당신의 현재 연봉이 평균 이상인가?
+    //    //연봉 입력하여 출력
+    //    //document.write로 출력
+    //    //"true면 평균 이상이고 false면 평균 미만이다."
+
+    //    annual=Number(prompt("연봉을 입력하세요."));
+    //    average=3100;
+    //    document.write("신입 개발자의 평균 연봉은 3100만원이다.<br>");
+    //    document.write(annual>=average);
+    //    document.write("<br>true일 경우 평균 이상, false일 경우 평균 미만이다.<br>");
+
+    //    //아메리카노 금액: 2000원
+
+    //    americano=2000;
+    //    money=Number(prompt("계좌 잔액을 입력하세요."));
+    //    document.write("<br>한 잔에 2000원인 아메리카노 5명 분을 구매할 수 있는가? <br>");
+    //    document.write((money>=americano*5));
+
+       //등가 ==(동등연산자), ===(일치연산자), !=
+    //    console.log(10==10);
+    //    console.log(10!=10);
+    //    console.log("10"===10);
+    //    //==: 데이터의 타입(문자/숫자)이 달라도 값이 같으면 같음. (같은 타입으로 변환함)
+    //    //===: 데이터의 타입(문자/숫자)이 다르면 다름.
+    //    //생년월일을 입력하여 회원가입할 때 입력한 생년월일과 비교한다면 (html에서 입력하는 모든 값은 문자열) ==
+
+    //    console.log("이순신"==="이순신");
+    //    name1="김유신";
+    //    name2="김유신    ";
+    //    console.log(name1.trim()===name2.trim());
+    //    //변수.trim() 문자열 양쪽 끝의 공백 제거
+    //    //trimStart() 문자열 앞쪽 공백 제거
+    //    //trimEnd() 문자열 뒤쪽 공백 제거
+    //    word1="abcd";
+    //    word2="ABcd";
+    //    console.log("로마자 대소문자가 다르다면"+(word1===word2));
+    //    console.log(word1.toLowerCase()===word2.toLowerCase());
+    //    //변수.toLowerCase() 모든 로마자를 소문자로 변환
+    //    //변수.toUpperCase() 모든 로마자를 대문자로 변환
+
+    //    //조건연산자: 조건식(비교연산자로 만들어진 식)을 비교하여 결과가 참이냐 거짓이냐에 따라 다음 실행할 코드를 설정할 수 있다.
+    //    age=25;
+    //    (age>=30)? console.log("30살 넘었다."):console.log("떡국 더 먹고 와라");
+    //    score=58;
+    //    결과=(score>=60)? "합격":"불합격";
+    //    console.log(결과);
+    //    //조건연산자에 무엇을 넣어도 되지만 새로운 변수 저장은 하지 말 것(코드가 꼬여도 찾기 어렵다)
+
+    //    //바이킹 탑승 가능 신장은 135cm 이상
+    //    tall=Number(prompt("당신의 신장은?"));
+    //    result=(tall>=135)? "바이킹을 탈 수 있습니다.":"바이킹을 탈 수 없습니다.";
+    //    document.write(result);
+
+       //하루에 총 걸음수가 6000보를 넘으면 포인트 10점을 받을 수 있다.
+       //이 사람의 오늘 걸음수를 입력받아 현재 포인트가 몇 점인지 출력하세요.
+    //    userPoint=435; //현재 포인트
+    //    step=Number(prompt("오늘 총 몇 걸음?"));
+    //    todayPoint=(step>6000)?10:0;
+    //    userPoint=userPoint+todayPoint;
+    //    document.write("총 점수: "+userPoint+"점");
+       //두 정수를 입력받아 두 정수 중 큰 수 출력
+    //    num1=Number(prompt("첫 번째 수를 입력하세요."));
+    //    num2=Number(prompt("두 번째 수를 입력하세요."));
+    //    result=(num1>num2)?num1:num2;
+    //    document.write("두 수 중 큰 수는 "+result+"입니다.");
+       //두 정수를 입력받아 두 정수의 합이 21이라면 블랙잭, 아니라면 합을 출력
+    //    num3=Number(prompt("첫 번째 수를 입력하세요."));
+    //    num4=Number(prompt("두 번째 수를 입력하세요."));
+    //    result2=((num3+num4)==21)?"BlackJack":(num3+num4);
+    //    document.write(result2);
+    //    num1=Math.floor(Math.random()*45)+1;
+    //    console.log(num1);
+       card1=Math.floor(Math.random()*11)+1;
+       card2=Math.floor(Math.random()*11)+1;
+       card3=0;
+       card3=((card1+card2)<=14)?Math.floor(Math.random()*10)+1:0;
+       document.write("나의 카드: "+card1+", "+card2+", "+card3+"<br>");
+       document.write("합: "+(card1+card2+card3)+"<br><br>");
+       //랜덤 함수를 사용하여 1~50 중 숫자 두 개를 받으세요.
+       //두 숫자의 곱이 1200 이상이면 '큰 수' 아니라면 '작은 수'라고 출력하세요.
+       num5=Math.floor(Math.random()*50)+1;
+       num6=Math.floor(Math.random()*50)+1;
+       result3=(num5*num6>=1200)?"큰 수":"작은 수";
+       document.write(`${num5}×${num6}=${num5*num6}<br>`);
+       document.write(result3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
