@@ -6,11 +6,41 @@
     <title>Document</title>
     <script>
         //1. 세 개의 정수를 입력받아 가장 큰 수를 출력(단, 같은 숫자 입력x)
+        num1=Number(prompt('첫 번째 정수를 입력하세요.'));
+        num2=Number(prompt('두 번째 정수를 입력하세요.'));
+        num3=Number(prompt('세 번째 정수를 입력하세요.'));
+        if((num1>num2)&&(num1>num3)){
+            document.write(`가장 큰 수는 ${num1}입니다.`);
+        }
+        else if(num2>num3){
+            document.write(`가장 큰 수는 ${num2}입니다.`);
+        }
+        else{
+            document.write(`가장 큰 수는 ${num3}입니다.`);
+        }
         
+        document.write("<hr>");
+
         //2. 컴퓨터와 주사위 게임
         //컴퓨터와 내가 긱긱 주사위 2개씩
         //주사위의 합이 큰 쪽이 승
         //단, 주사위가 같은 값이면 승
+        dice_com1=Math.floor(Math.random()*6)+1;
+        dice_com2=Math.floor(Math.random()*6)+1;
+        dice_com=(dice_com1+dice_com2);
+        dice_user1=Math.floor(Math.random()*6)+1;
+        dice_user2=Math.floor(Math.random()*6)+1;
+        dice_user=(dice_user1+dice_user2);
+        document.write(`당신의 주사위(${dice_user1}, ${dice_user2}) 컴퓨터의 주사위(${dice_com1}, ${dice_com2})<br>`);
+        if(dice_user>dice_com||(dice_user1==dice_user2)&&(dice_com1!=dice_com2)){
+            document.write('당신의 승리입니다.');
+        }
+        else if(dice_com>dice_user||(dice_com1==dice_com2)&&(dice_user1!=dice_user2)){
+            document.write(`컴퓨터의 승리입니다.`);
+        }
+        else{
+            document.write(`비겼습니다.`);
+        }
     </script>
 </head>
 <body>
