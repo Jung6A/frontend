@@ -31,12 +31,20 @@
         dice_user1=Math.floor(Math.random()*6)+1;
         dice_user2=Math.floor(Math.random()*6)+1;
         dice_user=(dice_user1+dice_user2);
-        document.write(`당신의 주사위(${dice_user1}, ${dice_user2}) 컴퓨터의 주사위(${dice_com1}, ${dice_com2})<br>`);
-        if(dice_user>dice_com||(dice_user1==dice_user2)&&(dice_com1!=dice_com2)){
-            document.write('당신의 승리입니다.');
+        document.write(`당신의 주사위 (${dice_user1}, ${dice_user2}) │ 컴퓨터의 주사위 (${dice_com1}, ${dice_com2})<br>`);
+        if(dice_user>dice_com){
+            if(((dice_user1!=dice_user2)&&(dice_com1==dice_com2)))
+            {document.write('컴퓨터의 승리입니다.');}
+            else{
+                document.write('당신의 승리입니다.');
+            }
         }
-        else if(dice_com>dice_user||(dice_com1==dice_com2)&&(dice_user1!=dice_user2)){
-            document.write(`컴퓨터의 승리입니다.`);
+        else if(dice_com>dice_user){
+            if(((dice_user1==dice_user2)&&(dice_com1!=dice_com2)))
+            {document.write('당신의 승리입니다.');}
+            else{
+                document.write('컴퓨터의 승리입니다.');
+            }
         }
         else{
             document.write(`비겼습니다.`);

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //변수 생성, 변수 할당이라고도 함
+        count=0; //변수의 초기화: 변수를 생성 또는 할당하며 데이터를 저장하는 행위
+        function up(){
+            count++;
+        }
+        function down(){
+            count--;
+        }
+    </script>
+</head>
+<body>
+    <!-- onclick은 마우스로 html 태그를 클릭할 때의 동작을 처리하기 위한 이벤트
+    태그를 클릭하면 onclick="함수명()"의 함수명을 가진 함수를 자바스크립트에서 찾아 실행
+    클릭하면 어떤 기능 또는 동작을 할 지 자바스크립트 작성 필요
+    함수명(): '함수명'이라는 이름의 함수를 실행하라는 뜻, '함수명'함수 호출 -->
+
+    <button onclick="up()">증가</button>
+    <button onclick="down()">감소</button>
+    <div id="" style="font-size:40px;"></div>
+</body>
+</html>
