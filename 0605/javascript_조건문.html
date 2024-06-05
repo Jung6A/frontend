@@ -5,14 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+    //변수의 범위(scope)
+    //let var const: 변수 앞에 붙이면 그 영역(괄호 안 등)에서만 사용 가능
+    let a=10;
+    a=20;
+    a=30
+    //let a=50;    변수 데이터 변경 가능, 변수 재생성 불가
+    var b=10;
+    b=20;
+    b=30;
+    var b=50;   //변수 데이터 변경 가능, 변수 재생성 가능
+    const c=10; //심볼릭 상수, 상수: 데이터 읽기 권한만 있는 메모리 공간
+    //c=20;      변수 데이터 변경 불가, 변수 재생성 불가
+
+    //let: {} 안에 변수 생성(지역변수), 전역변수, 배열 생성시, 객체 생성시
+    //var: {} 안에 변수 생성(지역변수)
+    //const: 고유값, 변경되면 안 되는 값, 불변 데이터를 이름으로 표현하고자 할 때
+    const pi=3.14;
+    //소프트웨어 개발시 다른 사람에게 변경하지 말라, 건드리지 말라고 알려주기 위한 용도
+
         //변수 생성, 변수 할당이라고도 함
         count=0; //변수의 초기화: 변수를 생성 또는 할당하며 데이터를 저장하는 행위
         function up(){
+            if(count<20){
             count++;
+            }
+            var divBox=document.getElementById("box");
+            divBox.innerText=count;
         }
         function down(){
+            if(count>-10){
             count--;
+            }
+            var divBox=document.getElementById("box");
+            divBox.innerText=count;
         }
+        //증가되는 최댓값은 20이고 감소되는 최솟값은 -10
+        //최대와 최소에 도달하면 더이상 증감되지 않게
     </script>
 </head>
 <body>
@@ -23,6 +52,6 @@
 
     <button onclick="up()">증가</button>
     <button onclick="down()">감소</button>
-    <div id="" style="font-size:40px;"></div>
+    <div id="box" style="font-size:40px;"></div>
 </body>
 </html>
