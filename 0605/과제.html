@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        var user=Number(prompt('컴퓨터가 맞힐 숫자를 입력하세요 (1~50중)'));
+        var max=51;
+        var min=1;
+        while(true){
+            com=Math.floor(Math.random()*(max-min))+min
+            if(user==com){
+                document.write(user+' 정답입니다.');
+                break;
+            }
+            else if(user>com){
+                document.write(com+' UP<br>');
+                min=com;
+            }
+            else{
+                document.write(com+' down<br>');
+                max=com;
+            }
+        }
+    </script>
 </head>
 <body>
-    //내가 제시한 숫자를 컴퓨터가 맞히기
-    //컴퓨터 머리 좋게 만들기…
-    //내가 입력한 숫자를 컴퓨터가 random 함수에서 up down으로 범위를 좁혀서… 뭐그런거
 </body>
 </html>
