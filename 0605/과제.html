@@ -7,9 +7,9 @@
     <script>
         var user=Number(prompt('컴퓨터가 맞힐 숫자를 입력하세요 (1~50중)'));
         var max=51;
-        var min=1;
+        var min=0;
         while(true){
-            com=Math.floor(Math.random()*(max-min))+min
+            com=Math.floor(Math.random()*(max-min-1))+min+1;
             if(user==com){
                 document.write(user+' 정답입니다.');
                 break;
