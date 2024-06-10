@@ -11,11 +11,7 @@
         //8의 배수에 해당하는 숫자 대신 '8배'라고 출력
         //3과 8의 공배수 대신 '3, 8배'라고 출력
 
-        var num=Number(prompt('원하는 숫자를 입력하세요(1~100)'));
-        while(num>100||num<1){
-            num=Number(prompt('범위 밖의 숫자입니다. 다시 입력하세요. (1~100)'));
-        }
-        for(var i=1;i<=num;i++){
+        for(var i=1;i<=100;i++){
             if(i%3==0&&i%8==0){
                 document.write(`'3배·8배'<br>`);
             }
