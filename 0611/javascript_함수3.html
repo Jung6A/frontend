@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/button.css">
+    <script>
+        //함수 형태
+        /*1. 매개변수와 반환값이 없는 함수
+                function eat(){
+                    document.write("나 샌드위치 먹었다");
+                }
+          2. 매개변수는 있고 반환값은 없는 함수
+                function eat(food){
+                    document.write("나 "+food+" 먹었다");
+                }
+          3. 매개변수는 없고 반환값은 있는 함수
+                function pickfood(){
+                    var food="청국장";
+                    return food; //반환
+                } 
+          4. 매개변수와 반환값이 있는 함수
+                function eat(food){
+                    var str= "나 "+food+" 먹었다";
+                    return str; //반환
+                }
+            //필요한 만큼 매개변수 만들어 사용 가능 but 반환값은 하나만 가능
+
+            반환이란: return이라고 함. 함수가 호출된 위치에 값을 되돌려 놓는 방법.
+            함수에 의해 생성된 데이터를 외부로 보내는 것: return
+            함수에 필요한 데이터를 외부에서 가져오는 것: 매개변수
+
+            var ment=eat('냉면');
+
+            함수는 기능(목적)을 정하고 정의해야 함.
+            함수의 기능을 벗어나는 코드 작성은 프로그램 동작의 결함, 장애가 될 수 있음.
+        */
+    //    function total(){
+    //     var kor=90;
+    //     var mat=80;
+    //     var eng=60
+    //     var tot=kor+mat+eng;
+    //     return tot;
+    //    }
+    //    var scoreTotal=total();
+    //    document.write(scoreTotal);
+
+    window.onload=function(){ //onload: 브라우저 화면 표시가 끝나면 발생하는 이벤트
+        //html 문서의 모든 리소스(html, css, javascript, 이미지 등)가 브라우저에 완전히 로드되면 발생
+        //onload는 태그에서 발생. img, iframe, script, link, video 등
+        // document.getElementById("power").addEventListener('click',function(a){});
+        document.getElementById("power").addEventListener('click',buttonPress);
+    }
+    let onoff=true; //전역변수
+    function buttonPress(){
+        if(onoff){
+            document.querySelector("#lcd").style.display="none";
+            onoff=false;
+        }
+        else{
+            document.querySelector("#lcd").style.display="block";
+            onoff=true;
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="lcd">
+        <label>온도</label> <b id="temp">25</b><br>
+        <label>운전</label> <b id="mode">냉방</b><br>
+        <label>세기</label> <b id="strength">1</b><br>
+    </div>
+    <div id="wrap">
+        <div id="up">
+            <div class="card" id="power">전원</div>
+            <div class="card" id="increase">온도▲</div>
+            <div class="card" id="diriving">운전선택</div>
+        </div>
+        <div id="down">
+            <div class="card" id="indirect">간접바람</div>
+            <div class="card" id="reduction">온도▼</div>
+            <div class="card" id="wind">바람세기</div>
+        </div>
+    </div>
+</body>
+</html>
