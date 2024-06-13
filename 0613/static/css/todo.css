@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+input{
+    padding-left: 10px;
+}
+#input_wrap{
+    display: flex;
+    padding-top: 20px;
+}
+#wrap{
+    width: 800px;
+    margin: 0 auto;
+}
+#todo_wrap{
+    width: 800px;
+    margin: 0 auto;
+}
+.input_box{
+    padding: 3px;
+}
+.input_button{
+    padding: 5px;
+}
+.title{
+    padding: 10px;
+}
+#todolist{
+    display: flex;
+    position: relative;
+}
+#todolist .todoTime{
+    position: absolute;
+    left: 400px;
+}
+#todolist .todoState{
+    position: absolute;
+    right: 100px;
+}
+#todoContent{
+    display: flex;
+    position: relative;
+}
+#todoContent .todo{
+    width: 400px;
+}
+#todoContent .todoTime{
+    position: absolute;
+    width: 300px;
+    left: 400px;
+}
+#todoContent .todoState{
+    position: absolute;
+    right: 110px;
+}

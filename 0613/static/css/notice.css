@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#notice_wrap{
+    padding: 50px;
+    padding-top: 30px;
+    width: 500px;
+    font-size: 20px;
+    position: relative;
+}
+#title{
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+}
+#content{
+    padding-top: 10px;
+}
+#list li{
+    cursor: pointer;
+    line-height: 40px;
+}
+#more{
+    position: absolute;
+    top: 45px;
+    right: 50px;
+    cursor: pointer;
+}
+#detail{
+    margin-top: 20px;
+    margin-left: 50px;
+}
