@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        //배열-배열생성, 배열에 저장되어 있는 값은 무엇인지
+        // var arr=[10,20,30,40,50];
+        // for(var i=0;i<arr.length;i++){
+        //      $("#show").append("<p>"+arr[i]+"</p>");
+        //  }
+
+        const name=["김유신","이순신","장보고","임꺽정","홍길동","최영","최무선","정약용"];
+        $(function(){ //window.omload ->브라우저에 모두 표시되면 실행
+            //jquery에서 여러 개의 태그를 선택한 경우 인덱스 표현은 .eq(인덱스)
+            let item=$(".item"); //document.getElementsByClassName("item")
+            console.log(item.length);
+            for(var i=0;i<item.length;i++){
+                //name 배열의 값을 li 태그에 무작위 출력
+                var idx=Math.floor(Math.random()*name.length);
+                item.eq(i).text(name[idx]); // 자바스크립트 -> item[i]
+            }
+        })
+        let num=new Array(26); //26개의 빈 공간 생성
+        let word="i like tomato";
+        // console.log(num);
+        for(var i=0;i<num.length;i++)
+            num[i]=0; //num 배열 0으로 초기화
+        
+        console.log("a".charCodeAt(0))
+        
+            //i like tomato에서 각 알파벳이 있는가?
+        for(var i=0;i<word.length;i++){
+            if(word.charCodeAt(i)>=97&&word.charCodeAt(i)<=122)
+            num[word.charCodeAt(i)-97]++;
+            //console.log(word.charCodeAt(i));
+        }
+        console.log(num);
+
+        // //문자열은 배열
+        // //문자열은 문자가 2개 이상 연속적으로 표현된 것
+        // // javascript에서는 모두 문자열, java에서는 문자열과 문자로 구분
+        // // javascript에서는 모든 문자열이 배열
+        // console.log(word[0]);
+        // var a=["abc","edfg"]; //var는 재선언 가능. 함수 스코프
+        // console.log(a[0]);    //함수의 {}에 사용 가능 영역, 제어문의 {} 벗어남
+        // console.log(a[1]);    //함수 안에서 var 배열을 사용할 경우
+        // console.log(a);       //배열의 주소가 첫번째 문자열의 주소로 지정되는 경우 발생
+        // console.log(a[0][1]); //문자열을 외부로부터 받아오는 경우 주로 발생
+
+        let score=[70,30,40,80,0,10,50,90,60,100];
+        //let rank=[10,8,4,1,9,7,3,2,6,5];
+        let stdName=["이순신","강감찬","장보고","최무선","문익점","장영실","정도전","이성계","이방원","계백"];
+        let temp=[];
+        for(var i=0;i<score.length;i++){
+            temp.push(score[i]); //score 배열의값 temp에 저장
+        }
+        temp.sort((a,b)=>b-a);
+        //temp.reverse;
+        let rank=[];
+        for(var i=0;i<score.length;i++){
+            rank.push(score.indexOf(temp[i]));
+        }
+        console.log(rank);
+        console.log("1등: "+stdName[rank[0]]);
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+</body>
+</html>
