@@ -48,47 +48,34 @@
             //w87 a65 s83 d68
             var key=event.keyCode;
             //typeof: 타입 확인
+            var stepx=x, stepy=y; //이동할 위치 표현 변수
+            board[y][x]=0;
+            $("td").eq(y*21+x).removeClass("me");
+            $("td").eq(y*21+x).addClass("blank");
             switch(key){
                 case 87: 
-                    board[y][x]=0;
-                    $("td").eq(y*21+x).removeClass("me");
-                    $("td").eq(y*21+x).addClass("blank"); //현재 위치를 blank로 변경
-                    y--;
-                    board[y][x]=2;
-                    $("td").eq(y*21+x).removeClass("blank");
-                    $("td").eq(y*21+x).addClass("me"); //이동할 위치를 me로 변경
+                    stepy--;
                     break;
-                case 65: 
-                    board[y][x]=0;
-                    $("td").eq(y*21+x).removeClass("me");
-                    $("td").eq(y*21+x).addClass("blank");
-                    x--;
-                    board[y][x]=2;
-                    $("td").eq(y*21+x).removeClass("blank");
-                    $("td").eq(y*21+x).addClass("me");
+                case 65:
+                    stepx--;
                     break;
                 case 83:
-                    board[y][x]=0;
-                    $("td").eq(y*21+x).removeClass("me");
-                    $("td").eq(y*21+x).addClass("blank");
-                    y++;
-                    board[y][x]=2;
-                    $("td").eq(y*21+x).removeClass("blank");
-                    $("td").eq(y*21+x).addClass("me");
+                    stepy++;
                     break; 
-                case 68: 
-                    board[y][x]=0;
-                    $("td").eq(y*21+x).removeClass("me");
-                    $("td").eq(y*21+x).addClass("blank");
-                    x++;
-                    board[y][x]=2;
-                    $("td").eq(y*21+x).removeClass("blank");
-                    $("td").eq(y*21+x).addClass("me");
+                case 68:
+                    stepx++;
                     break;
             }
+            if(board[stepy][stepx]!=1){
+                x=stepx;
+                y=stepy;
+            }else{
+                alert("벽에 부딪혔습니다.");
+            }
+            board[y][x]=2;
+            $("td").eq(y*21+x).removeClass("blank");
+            $("td").eq(y*21+x).addClass("me");
         });
-        //벽 안 뚫게 하기
-        //최대한 줄이기
     </script>
     <style> /*순서를 따지지 않음*/
         #wrap table{border-collapse: collapse;}
