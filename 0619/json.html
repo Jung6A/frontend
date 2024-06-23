@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student={name:"이순신",age:19,tall:172};
+        document.write(student.name);
+        //JavaScript Object Notation
+        //JSON.stringify 자바스크립트 객체를 문자열로 변환
+        //JSON.parse 문자열을 자바스크립트 객체로 변환
+        let str=JSON.stringify(student);
+        document.write("<br>"+str);
+        let std=JSON.parse(str);
+        document.write("<br>"+std);
+
+        //student.json
+        //xml
+        const xml=new XMLHttpRequest();
+        xml.onload=function(){
+            var std=JSON.parse(this.responseText);
+            view(std);
+            view(sigu);
+            // document.write(std.name);
+            // document.write(std.age);
+        };
+        // xml.open("GET","student.json"); //받기
+        // xml.send(); //보내기
+
+        xml.open("GET","sigu.json");
+        xml.send();
+
+        function view(std){
+            for(var i=0;i<std.length;i++){
+                if(std[i].법정동명.indexOf("대전광역시 중구")!=-1){
+                    document.write(`${법정동명}<br>광역시도코드: ${광역시도코드}, 시군구코드: ${시군구코드}`);
+                }
+            }
+        }
+
+        //대전광역시 중구의 광역시 코드와 시군구 코드 출력
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
