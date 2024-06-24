@@ -4,7 +4,9 @@ function timeStart(){
         $("#step").text(`${time}초`);
     }, 1000);
 }
+let clickStop=true;
 function imgClick(){
+    if(!clickStop) return; //두 번 이상 연속 클릭 방지
     var idx=$(".item").index($(this)); //몇 번째 div를 클릭했는지 인덱스
     var $clickImg=$(".item").eq(idx).find("img"); //클릭한 div의 img 태그
     //클릭한 이미지 화면에 표시
@@ -31,6 +33,7 @@ function imgClick(){
             $(".item").eq(selectImg[1].div).off("click");
             selectImg=[]; //이미지 비교 끝냈으니 다음을 위해 초기화
         }else{ //두 이미지가 서로 다르다
+            clickStop=false;
             //두 개의 이미지가 서로 다르므로 1초 후 이미지 감추기
             setTimeout(function(){
                 $(".item").eq(selectImg[0].div).find("img").removeClass("select");
@@ -38,6 +41,7 @@ function imgClick(){
                 $(".item").eq(selectImg[0].div).find("img").addClass("hide");
                 $(".item").eq(selectImg[1].div).find("img").addClass("hide");
                 selectImg=[]; //이미지 비교 끝냈으니 다음을 위해 초기화
+                clickStop=true;
             },800);
         }
     }
