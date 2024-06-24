@@ -28,6 +28,8 @@ boardInit=function(){
 start=function(){
     stateInit();
     imgLocation();
+    $(".item").on("click",imgClick);
+    timeStart();
 }
 //게임 현황 초기화 함수
 stateInit=function(){
@@ -57,6 +59,9 @@ imgLocation=function(){
         $(this).find("img").attr("src","./static/image/"+imgName[imgPlace[i]]);
         $(this).find("img").removeClass("hide");
     });
+    setTimeout(function(){
+        $(".item>img").addClass("hide");
+    }, 1200);
 }
 function shuffle(){
     for(var i=imgPlace.length-1;i>0;i--){
