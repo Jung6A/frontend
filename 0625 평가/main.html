@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/css/main.css">
+    <script src="./static/javascript/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="title"><h2>세상의 모든 부동산 - 세모부</h2></div>
+        <div id="header">
+            <div id="content">
+                <select id="trade" name="trade">
+                    <option value="" disabled selected>거래방식</option>
+                    <option value="t0">전체</option>
+                    <option value="t2">매매</option>
+                    <option value="t3">전세</option>
+                    <option value="t4">월세</option>
+                </select>
+                <select id="price" name="price">
+                    <option value="" disabled selected>가격대</option>
+                    <option value="p0">전체</option>
+                    <option value="p2">1억 미만</option>
+                    <option value="p3">1억~5억</option>
+                    <option value="p4">5억~10억</option>
+                    <option value="p5">10억~50억</option>
+                    <option value="p6">50억~100억</option>
+                </select>
+                <select id="width" name="width">
+                    <option value="" disabled selected>면적</option>
+                    <option value="w0">전체</option>
+                    <option value="w2">10평 미만</option>
+                    <option value="w3">10평~20평</option>
+                    <option value="w4">20평~30평</option>
+                    <option value="w5">30평~50평</option>
+                    <option value="w6">50평~70평</option>
+                    <option value="w7">70평~100평</option>
+                </select>
+                <select id="room" name="room">
+                    <option value="" disabled selected>방/욕실 수</option>
+                    <option value="r0">전체</option>
+                    <option value="r2">1개</option>
+                    <option value="r3">2개</option>
+                    <option value="r4">3개</option>
+                    <option value="r5">4개 이상</option>
+                </select>
+            </div>
+            <div id="search">
+                <input type="text" id="searchInput" placeholder="검색">
+                <div id="sangdam"><b>상담</b></div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="itemWrap">
+                <div class="item" id="img1"></div>
+                <div class="itemDetail">아파트<br>전세 1억 2,000</div>
+            </div>
+            <div class="itemWrap">
+                <div class="item" id="img2"></div>
+                <div class="itemDetail">주택<br>전세 2억 2,000</div>
+            </div>
+            <div class="itemWrap">
+                <div class="item" id="img3"></div>
+                <div class="itemDetail">오피스텔<br>월세 1,000/50</div>
+            </div>
+            <div class="itemWrap">
+                <div class="item" id="img4"></div>
+                <div class="itemDetail">아파트<br>전세 2억 2,000</div>
+            </div>
+            <div class="itemWrap">
+                <div class="item" id="img5"></div>
+                <div class="itemDetail">아파트<br>매매 30억 2,000</div>
+            </div>
+            <div class="itemWrap">
+                <div class="item" id="img6"></div>
+                <div class="itemDetail">아파트<br>전세 1억 2,500</div>
+            </div>
+            <div class="itemWrap">
+                <div class="item" id="img7"></div>
+                <div class="itemDetail">아파트<br>전세 2억 6,000</div>
+            </div>
+            <div class="itemWrap">
+                <div class="item" id="img8"></div>
+                <div class="itemDetail">오피스텔<br>월세 2,000/45</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
