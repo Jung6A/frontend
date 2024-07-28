@@ -1,0 +1,4 @@
+//예약 고객 (이름, 연락처)
+
+private String name;
+private String tel;
