@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#mypageWrap{
+    text-align: center;
+}
+.inputField{
+    display: flex;
+    padding: 10px 0;
+    height: 50px;
+    justify-content: center;
+}
+.inputField input{
+    height: 25px;
+    margin-right: 10px;
+}
+.inputField button{
+    height: 25px;
+    padding: 0 5px;
+}
+
+#infoWrap{
+    position: relative;
+    padding: 0 auto;
+}
+.attribute{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.modifyBT{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.searchField{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+}
+#search{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    padding: 2px;
+}
+#searchBT{
+    margin-left: 5px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+.myHistory{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.thumnail{
+    width: 150px;
+    height: 150px;
+    margin: 35px;
+    margin-right: 20px;
+    border: 1px solid black; /* 외곽선은 임시. 실제로는 삭제 */
+}
+.content{
+    margin: 35px;
+    margin-left: 15px;
+}
+.contentTitle{
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    font-size: 20px;
+}
+.deleteBT{
+    color: red;
+    padding-right: 10px;
+}
+.contentStatus{
+    padding-bottom: 30px;
+}
+.contentInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.contentInfoTitle{
+    padding-bottom: 15px;
+}
+
+.infoTime{
+    margin-right: 80px;
+}
+.infoCount{
+    margin-right: 15px;
+}
+
+.infoCost{
+    margin-right: 50px;
+}
+.infoName{
+    margin-right: 50px;
+}
+.infoStatus{
+    margin-right: 15px;
+}

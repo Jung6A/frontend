@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragment/main}">
+
+<head>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">통계 상세</title>
+
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" href="./static/css/1.css">
+    </th:block>
+    <th:block layout:fragment="script"></th:block>
+</head>
+
+<body>
+<div id="wrap">
+    <div layout:fragment="main" id="main">
+        <div id="dashDetailWrap">
+            <div id="dashDetail">
+                <img src="static/image/power-bi-line.png">
+            </div>
+            <div class="page">
+                <a id="pre" href="">◀ 이전</a>
+                <a id="next" href="">다음 ▶</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

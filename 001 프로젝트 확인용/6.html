@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragment/main}">
+
+<head>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">멤버 관리</title>
+
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" href="./static/css/1.css">
+    </th:block>
+    <th:block layout:fragment="script"></th:block>
+</head>
+
+<body>
+<div id="wrap">
+    <div layout:fragment="main" id="main">
+        <div id="userListWrap">
+            <div id="userList">
+                <table>
+                    <tr>
+                        <th class="number">no</th>
+                        <th class="userId">아이디</th>
+                        <th class="userEmail">이메일</th>
+                        <th class="userName">이름</th>
+                        <th class="userNickName">닉네임</th>
+                        <th class="userBirthDate">생년월일</th>
+                        <th class="userAddress">주소</th>
+                        <th class="signInDate">가입일</th>
+                        <th class="status">상태</th>
+                        <th class="admin">관리</th>
+                        <th class="confirmBT">확인</th>
+                    </tr>
+                    <tr> <!-- 이후 DB에서 불러와 th:each 반복문으로 수정 -->
+                        <td class="number"></td>
+                        <td class="userId"></td>
+                        <td class="userEmail"></td>
+                        <td class="userName"></td>
+                        <td class="userNickName"></td>
+                        <td class="userBirthDate"></td>
+                        <td class="userAddress"></td>
+                        <td class="signInDate"></td>
+                        <td class="status"></td>
+                        <td class="admin"></td>
+                        <td class="confirmBT">
+                            <button>적용</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="page">여기는 페이징</div>
+            <br>
+            <div class="mailBT">
+                <button><a href="/admin/user/mail">단체 메일</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

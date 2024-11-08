@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragment/main}">
+
+<head>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">콘텐츠 관리</title>
+
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" href="./static/css/1.css">
+    </th:block>
+    <th:block layout:fragment="script"></th:block>
+</head>
+
+<body>
+<div id="wrap">
+    <div layout:fragment="main" id="main">
+        <div id="contentListWrap">
+            <div id="contentList">
+                <table>
+                    <tr>
+                        <th class="number">no</th>
+                        <th class="category">분류</th>
+                        <th class="title">제목</th>
+                        <th class="writeDate">작성일</th>
+                        <th class="endDate">마감일자</th>
+                        <th class="status">상태</th>
+                        <th class="modifyBT">수정</th>
+                    </tr>
+                    <tr> <!-- 이후 DB에서 불러와 th:each 반복문으로 수정 -->
+                        <td class="number"></td>
+                        <td class="category"></td>
+                        <td class="title"></td>
+                        <td class="writeDate"></td>
+                        <td class="endDate"></td>
+                        <td class="status"></td>
+                        <td class="modifyBT">
+                            <button>수정</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="page">여기는 페이징</div>
+            <br>
+            <div class="writeBT">
+                <button><a href="/admin/content/write">작성 버튼</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

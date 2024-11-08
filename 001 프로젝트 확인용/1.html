@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragment/main}">
+
+<head>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">관리자 페이지</title>
+
+    <th:block layout:fragment="css"><link rel="stylesheet" href="./static/css/1.css"></th:block>
+    <th:block layout:fragment="script"></th:block>
+</head>
+
+<body>
+<div id="wrap">
+    <div layout:fragment="main" id="main">
+        <div id="dashWrap">
+            <div id="dateVisitor" class="item">
+                <a>날짜별 방문자 통계</a>
+            </div>
+            <div id="userCount" class="item">
+                <a>회원 수 변화 통계</a>
+            </div>
+            <div id="donateCount" class="item">
+                <a>기부 수 변화 통계</a>
+            </div>
+            <div id="donateCost" class="item">
+                <a>기부 금액 변화 통계</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
